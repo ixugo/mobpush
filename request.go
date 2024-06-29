@@ -1,8 +1,8 @@
-package mob_push_sdk
+package mobpush
 
 type requestData map[string]interface{}
 
-func (client *PushClient) NewRequestData()  requestData{
+func (client *PushClient) NewRequestData() requestData {
 	requestData := make(requestData)
 	requestData["appkey"] = client.AppKey
 	return requestData

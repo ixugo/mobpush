@@ -1,12 +1,12 @@
-package mob_push_sdk
+package mobpush
 
 const (
-	STATS_GET_BY_WORKID_URI  = "/v3/stats/getByWorkId";
-	STATS_GET_BY_WORKIDS_URI = "/v3/stats/getByWorkIds";
-	STATS_GET_BY_WORKNO_URI  = "/v3/stats/getByWorkno";
-	STATS_GET_BY_HOUR_URI    = "/v3/stats/getByHour";
-	STATS_GET_BY_DAY_URI     = "/v3/stats/getByDay";
-	STATS_GET_BY_DEVICE_URI  = "/v3/stats/getByDevice";
+	STATS_GET_BY_WORKID_URI  = "/v3/stats/getByWorkId"
+	STATS_GET_BY_WORKIDS_URI = "/v3/stats/getByWorkIds"
+	STATS_GET_BY_WORKNO_URI  = "/v3/stats/getByWorkno"
+	STATS_GET_BY_HOUR_URI    = "/v3/stats/getByHour"
+	STATS_GET_BY_DAY_URI     = "/v3/stats/getByDay"
+	STATS_GET_BY_DEVICE_URI  = "/v3/stats/getByDevice"
 )
 
 func (client *PushClient) GetStatsByWorkId(workId string) ([]byte, error) {

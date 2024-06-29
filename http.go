@@ -1,4 +1,4 @@
-package mob_push_sdk
+package mobpush
 
 import (
 	"bytes"
@@ -56,7 +56,6 @@ func (client *HTTPClient) Get(uri string) ([]byte, error) {
 }
 
 func (client *HTTPClient) PostJSON(pushClient *PushClient, uri string, values interface{}) ([]byte, error) {
-
 	var body []byte
 
 	if requestData, err := json.Marshal(values); err != nil {
@@ -66,7 +65,7 @@ func (client *HTTPClient) PostJSON(pushClient *PushClient, uri string, values in
 	}
 	client.SetSign(pushClient, body)
 
-	//fmt.Println(uri,string(body))
+	// fmt.Println(uri,string(body))
 
 	if request, err := http.NewRequest(http.MethodPost, uri, bytes.NewReader(body)); err == nil {
 		request.Header.Add("Content-Type", "application/json")
@@ -79,7 +78,6 @@ func (client *HTTPClient) PostJSON(pushClient *PushClient, uri string, values in
 }
 
 func (client *HTTPClient) SetSign(pushClient *PushClient, requestJson []byte) *HTTPClient {
-
 	client.Appkey = pushClient.AppKey
 	client.AppSecret = pushClient.AppSecert
 

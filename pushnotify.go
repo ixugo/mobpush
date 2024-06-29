@@ -1,4 +1,4 @@
-package mob_push_sdk
+package mobpush
 
 type PushNotify struct {
 	TaskCron       int            `json:"taskCron"`

@@ -1,4 +1,4 @@
-package mob_push_sdk
+package mobpush
 
 type PushOperator struct {
 	DropType int    `json:"dropType"`

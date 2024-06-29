@@ -1,8 +1,10 @@
 # [MobPush API for Golang](http://wiki.mob.com/mobpush-rest-api-接口文档/)
 
+Clone 自 https://github.com/MobClub/mobpush-websdkv3-go.git
+
 ![image](https://github.com/MOBX/MOB-SMS-WEBAPI/blob/master/doc/images/logo.png)
 
-**[MobPush API for Golang](http://wiki.mob.com/mobpush-rest-api-接口文档/)** 
+**[MobPush API for Golang](http://wiki.mob.com/mobpush-rest-api-接口文档/)**
 为了帮助开发者更方便接入MobPush免费推送SDK，提供完整的API接口的Golang实现，包含设备操作相关接口、推送操作相关接口以及公共接口。
 
 了解更多 [MobPush 免费推送SDK.](http://mobpush.mob.com)
@@ -19,7 +21,7 @@
     * 用户标签推送 pushByTags
     * Registration ID推送 pushByRids
     * 复杂地理位置推送 pushByAreas
-    * 用户自定义配置推送 pushTaskV3         
+    * 用户自定义配置推送 pushTaskV3
 * 推送任务详情查询接口
 	* 查询推送任务详情(根据batchId) getPushByBatchId
 	* 查询推送任务详情(根据workno) getPushByWorkno
@@ -34,19 +36,19 @@
     * 按小时查询统计 getStatsByHour
     * 按日期查询统计 getStatsByDay
     * 根据id查询任务下发给设备的详情统计 getStatsByDevice
-       
+
 
 
 # 使用方式
 
- go get github.com/MobClub/mobpush-websdkv3-go   
+ go get github.com/MobClub/mobpush-websdkv3-go
  从开发者平台获取 appkey 和 appSecert
 
 ## 使用示例
 
-#### 发送推送示例片段代码 
-    
-   
+#### 发送推送示例片段代码
+
+
     workNo := "a7b9f1918c596ea"
     appkey,appSecert := "appkey","appSecert"
 	client := NewPushClient(appkey,appSecert);
@@ -54,7 +56,7 @@
 
 #### 统计查询示例片段代码
 
- 
+
     workNo := "a7b9f1918c596ea"
     appkey,appSecert := "appkey","appSecert"
     client := NewPushClient(appkey,appSecert);
@@ -62,5 +64,5 @@
     if err != nil{
     	t.Error("error")
     }
-    
+
 2.0.0版本新增设备管理和批量推送接口，以及定速推送功能

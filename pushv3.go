@@ -1,13 +1,13 @@
-package mob_push_sdk
+package mobpush
 
 const (
-	PUSH_PUSH_URI          = "/v3/push/createPush";
-	PUSH_GET_BY_WORKID_URI = "/v3/push/getByWorkId";
-	PUSH_GET_BY_WORKNO_URI = "/v3/push/getByWorkno";
-	PUSH_CANCEL_TASK_URI   = "/push/drop";
-	PUSH_REPLACE_TASK_URI  = "/push/replace";
-	PUSH_RECALL_TASK_URI   = "/push/recall";
-	PUSH_MULTI_URI   = "/v3/push/createMulti";
+	PUSH_PUSH_URI          = "/v3/push/createPush"
+	PUSH_GET_BY_WORKID_URI = "/v3/push/getByWorkId"
+	PUSH_GET_BY_WORKNO_URI = "/v3/push/getByWorkno"
+	PUSH_CANCEL_TASK_URI   = "/push/drop"
+	PUSH_REPLACE_TASK_URI  = "/push/replace"
+	PUSH_RECALL_TASK_URI   = "/push/recall"
+	PUSH_MULTI_URI         = "/v3/push/createMulti"
 )
 
 func (client *PushClient) Push(push Push) ([]byte, error) {
