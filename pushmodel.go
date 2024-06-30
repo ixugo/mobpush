@@ -1,13 +1,14 @@
 package mobpush
 
 type Push struct {
-	WorkNo       string        `json:"workno"`
-	Source       string        `json:"source"`
-	Appkey       string        `json:"appkey"`
-	PushTarget   PushTarget    `json:"pushTarget"`
-	PushNotify   PushNotify    `json:"pushNotify"`
-	PushOperator *PushOperator `json:"pushOperator,omitempty"`
-	PushForward  *PushForward  `json:"pushForward,omitempty"`
+	WorkNo           string            `json:"workno"`
+	Source           string            `json:"source"`
+	Appkey           string            `json:"appkey"`
+	PushTarget       PushTarget        `json:"pushTarget"`
+	PushNotify       PushNotify        `json:"pushNotify"`
+	PushOperator     *PushOperator     `json:"pushOperator,omitempty"`
+	PushForward      *PushForward      `json:"pushForward,omitempty"`
+	PushFactoryExtra *PushFactoryExtra `json:"pushFactoryExtra,omitempty"`
 }
 
 func NewPushModel(appKey string) *Push {
