@@ -16,40 +16,40 @@ func (client *PushClient) Push(push Push) ([]byte, error) {
 
 func (client *PushClient) PushAll(workNo, title, content string) ([]byte, error) {
 	push := NewPushModel(client.AppKey)
-	push.setWorkno(workNo)
-	push.setTitle(title).setContent(content).setTarget(TARGET_ALL)
+	push.SetWorkno(workNo)
+	push.SetTitle(title).SetContent(content).SetTarget(TARGET_ALL)
 	return GetHTTPClient().PostJSON(client, BASE_URL+PUSH_PUSH_URI, push)
 }
 
 func (client *PushClient) PushByAlias(workNo, title, content string, alias []string) ([]byte, error) {
 	push := NewPushModel(client.AppKey)
-	push.setWorkno(workNo)
-	push.setTitle(title).setContent(content).setTarget(TARGET_ALIAS)
-	push.setAlias(alias)
+	push.SetWorkno(workNo)
+	push.SetTitle(title).SetContent(content).SetTarget(TARGET_ALIAS)
+	push.SetAlias(alias)
 	return GetHTTPClient().PostJSON(client, BASE_URL+PUSH_PUSH_URI, push)
 }
 
 func (client *PushClient) PushByTags(workNo, title, content string, tags []string) ([]byte, error) {
 	push := NewPushModel(client.AppKey)
-	push.setWorkno(workNo)
-	push.setTitle(title).setContent(content).setTarget(TARGET_TAGS)
-	push.setTags(tags)
+	push.SetWorkno(workNo)
+	push.SetTitle(title).SetContent(content).SetTarget(TARGET_TAGS)
+	push.SetTags(tags)
 	return GetHTTPClient().PostJSON(client, BASE_URL+PUSH_PUSH_URI, push)
 }
 
 func (client *PushClient) PushByRids(workNo, title, content string, rids []string) ([]byte, error) {
 	push := NewPushModel(client.AppKey)
-	push.setWorkno(workNo)
-	push.setTitle(title).setContent(content).setTarget(TARGET_RIDS)
-	push.setRids(rids)
+	push.SetWorkno(workNo)
+	push.SetTitle(title).SetContent(content).SetTarget(TARGET_RIDS)
+	push.SetRids(rids)
 	return GetHTTPClient().PostJSON(client, BASE_URL+PUSH_PUSH_URI, push)
 }
 
 func (client *PushClient) PushByAreas(workNo, title, content string, areas PushAreas) ([]byte, error) {
 	push := NewPushModel(client.AppKey)
-	push.setWorkno(workNo)
-	push.setTitle(title).setContent(content).setTarget(TARGET_AREAS)
-	push.setPushAreas(areas)
+	push.SetWorkno(workNo)
+	push.SetTitle(title).SetContent(content).SetTarget(TARGET_AREAS)
+	push.SetPushAreas(areas)
 	return GetHTTPClient().PostJSON(client, BASE_URL+PUSH_PUSH_URI, push)
 }
 

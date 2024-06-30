@@ -34,7 +34,7 @@ func (push *Push) getDefaultPushModel() *Push {
 	return push
 }
 
-func (push *Push) setWorkno(workno string) *Push {
+func (push *Push) SetWorkno(workno string) *Push {
 	push.WorkNo = workno
 	return push
 }

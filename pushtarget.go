@@ -47,27 +47,27 @@ type PushProvince struct {
 	ExcludeCities []string `json:"excludeCities"`
 }
 
-func (p *Push) setTarget(targetType TargetType) *Push {
+func (p *Push) SetTarget(targetType TargetType) *Push {
 	p.PushTarget.Target = int(targetType)
 	return p
 }
 
-func (p *Push) setAlias(alias []string) *Push {
+func (p *Push) SetAlias(alias []string) *Push {
 	p.PushTarget.Alias = alias
 	return p
 }
 
-func (p *Push) setTags(tags []string) *Push {
+func (p *Push) SetTags(tags []string) *Push {
 	p.PushTarget.Tags = tags
 	return p
 }
 
-func (p *Push) setRids(rids []string) *Push {
+func (p *Push) SetRids(rids []string) *Push {
 	p.PushTarget.Rids = rids
 	return p
 }
 
-func (p *Push) setPushAreas(pushAreas PushAreas) *Push {
+func (p *Push) SetPushAreas(pushAreas PushAreas) *Push {
 	p.PushTarget.PushAreas = &pushAreas
 	return p
 }
